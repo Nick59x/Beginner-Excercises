@@ -1,0 +1,22 @@
+import random
+
+a = random.randint(1, 9)
+guess = 0
+count = 0
+while guess != a and guess != exit:
+    guess = int(input('Enter a number between 1 and 9:'))
+
+    if guess == 'exit':
+        break
+
+    guess = int(guess)
+
+    count += 1
+
+    if guess < a:
+        print('Too low!')
+    elif guess > a:
+        print('Too High!')
+    else:
+        print('You got it')
+        print('And it only took', count, 'tries.')
